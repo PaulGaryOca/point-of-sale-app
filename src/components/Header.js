@@ -1,32 +1,36 @@
 import React, { useState } from 'react';
-import LoginPopUp from './LoginPopUp';
+import { Link } from 'react-router-dom'; // Import Link for navigation
 import './Header.css';
+import LoginPopUp from './LoginPopUp';
+import SignUpPopUp from './SignUpPopUp';
 
 const Header = () => {
-    const [isPopupVisible, setPopupVisible] = useState(false);
+    const [isLoginPopupOpen, setIsLoginPopupOpen] = useState(false);
+    const [isSignUpPopupOpen, setIsSignUpPopupOpen] = useState(false);
 
-    const handleLoginClick = () => {
-        setPopupVisible(true);
+    const toggleLoginPopup = () => {
+        setIsLoginPopupOpen(!isLoginPopupOpen);
     };
 
-    const closePopup = () => {
-        setPopupVisible(false);
+    const toggleSignUpPopup = () => {
+        setIsSignUpPopupOpen(!isSignUpPopupOpen);
     };
 
     return (
         <header className="header">
             <div className="logo">NMPC Logo</div>
             <nav>
-                <a href="/">Home</a>
-                <a href="/">Products and Services</a>
-                <a href="/">News and Events</a>
-                <a href="/">About Us</a>
+                <Link to="/">Home</Link>
+                <Link to="/products-and-services">Products and Services</Link> {/* Updated Link */}
+                <Link to="/">News and Events</Link>
+                <Link to="/">About Us</Link>
             </nav>
             <div className="cta-buttons">
-                <button className="secondary" onClick={handleLoginClick}>Log In</button>
-                <button>Become a member</button>
+                <button className="secondary" onClick={toggleLoginPopup}>Log In</button>
+                <button className="member-btn" onClick={toggleSignUpPopup}>Become a Member</button>
             </div>
-            {isPopupVisible && <LoginPopUp onClose={closePopup} />}
+            {isLoginPopupOpen && <LoginPopUp onClose={toggleLoginPopup} />}
+            {isSignUpPopupOpen && <SignUpPopUp onClose={toggleSignUpPopup} />}
         </header>
     );
 };

@@ -1,22 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 .join-us-section {
-    background-image: url('body.png');  /* Add background image */
+    background-image: url('body.png');
     background-size: cover;
     background-position: center;
     text-align: center;
     color: white;
-    padding: 100px 20px 60px;  /* Add extra top padding to prevent overlap */
+    padding: 100px 20px 60px;
     font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    box-sizing: border-box;
 }
+
 .join-us-section .content h1 {
     font-size: 48px;
     margin-bottom: 20px;
     font-weight: bold;
-    font-family: 'Poppins', sans-serif; /* Ensure Poppins is used */
+    font-family: 'Poppins', sans-serif;
     margin-top: 250px;
-    
 }
+
 .join-us-section .content p {
     font-size: 18px;
     margin-bottom: 40px;
@@ -51,7 +54,7 @@
 .statistics {
     display: flex;
     justify-content: center;
-    gap: 100px; /* Adjust gap for more space between the stat items */
+    gap: 100px;
     margin-top: 50px;
     padding: 20px;
     background-color: white;
@@ -62,22 +65,21 @@
 
 .stat-item {
     text-align: center;
-    padding: 0 20px; /* Add padding to each stat item for extra breathing room */
+    padding: 0 20px;
 }
 
 .stat-item h3 {
     font-size: 32px;
-    margin: 20px 0; /* Increase margin between the number and the label */
+    margin: 20px 0;
     font-weight: bold;
 }
 
 .stat-item p {
     font-size: 16px;
-    margin-top: 10px; /* Add margin to space out the labels */
+    margin-top: 10px;
 }
 
 .stat-icon {
     font-size: 40px;
-    margin-bottom: 15px; /* Increase space between the icon and the number */
+    margin-bottom: 15px;
 }
-

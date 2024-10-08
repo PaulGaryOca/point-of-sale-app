@@ -1,4 +1,3 @@
-// server.js
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
@@ -42,17 +41,25 @@ app.post('/api/register', async (req, res) => {
 // Login endpoint
 app.post('/api/login', async (req, res) => {
     const { email, password } = req.body;
+    console.log(`Login attempt with email: ${email}`); // Log the email
 
     try {
         const user = await User.findOne({ email });
-        if (!user) return res.status(400).json({ error: 'Invalid email or password' });
+        if (!user) {
+            console.log('User not found'); // Log if user is not found
+            return res.status(400).json({ error: 'Invalid email or password' });
+        }
 
         const isMatch = await bcrypt.compare(password, user.password);
-        if (!isMatch) return res.status(400).json({ error: 'Invalid email or password' });
+        if (!isMatch) {
+            console.log('Password does not match'); // Log if password does not match
+            return res.status(400).json({ error: 'Invalid email or password' });
+        }
 
         const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
         res.json({ token });
     } catch (error) {
+        console.error('Error logging in:', error);
         res.status(500).json({ error: 'Error logging in' });
     }
 });

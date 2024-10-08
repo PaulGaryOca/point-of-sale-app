@@ -1,15 +1,15 @@
 .header {
-    background-color: transparent; /* Makes the header transparent */
-    position: absolute;            /* Ensures the header overlaps the background */
-    width: 100%;                   /* Full width */
-    top: 0;                        /* Stick to the top */
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    top: 0;
     left: 0;
-    z-index: 100;                  /* Ensure header is on top of the background */
+    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    color: white;                  /* White text for visibility */
+    color: white;
 }
 
 .header nav {
@@ -18,16 +18,16 @@
 }
 
 .header nav a {
-    color: white;                  /* Adjust text color */
+    color: white;
     text-decoration: none;
     font-size: 16px;
-    font-family: 'Poppins', sans-serif; /* Ensure font consistency */
+    font-family: 'Poppins', sans-serif;
 }
 
 .header .cta-buttons {
     display: flex;
     gap: 15px;
-    margin-right: 100px; /* Keep the right margin for the secondary button */
+    margin-right: 100px;
 }
 
 .header .cta-buttons button {
@@ -43,5 +43,5 @@
 .header .cta-buttons button.secondary {
     background-color: transparent;
     border: 2px solid white;
-    margin-left: -100px; /* Move the button 100px to the left */
+    margin-left: -100px;
 }

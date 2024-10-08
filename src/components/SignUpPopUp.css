@@ -1,4 +1,4 @@
-.login-popup {
+.signup-popup {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -11,21 +11,21 @@
     width: 300px;
 }
 
-.login-popup h2 {
+.signup-popup h2 {
     text-align: center;
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
     color: #335DA1;
 }
 
-.login-popup form {
+.signup-popup form {
     display: flex;
     flex-direction: column;
 }
 
-.login-popup input[type="email"],
-.login-popup input[type="password"],
-.login-popup input[type="text"] {
+.signup-popup input[type="email"],
+.signup-popup input[type="password"],
+.signup-popup input[type="text"] {
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 10px;
@@ -35,7 +35,7 @@
     margin-left: 10px;
 }
 
-.login-popup button {
+.signup-popup button {
     background-color: #335DA1;
     color: white;
     border: none;
@@ -46,7 +46,7 @@
     transition: background-color 0.3s ease;
 }
 
-.login-popup button:hover {
+.signup-popup button:hover {
     background-color: #284d80;
 }
 
@@ -69,7 +69,7 @@
 }
 
 .password-container {
-    position: relative; 
+    position: relative;
 }
 
 .toggle-password {
@@ -77,10 +77,9 @@
     border: none;
     cursor: pointer;
     position: absolute;
-    margin-right: -15px;
-    margin-top: -10px;
+    right: 10px;
+    top: 10px;
     font-size: 20px;
-    color: #335DA1; 
-    height: 40px;
-    z-index: 1;
+    color: #335DA1;
+    z-index: 1; 
 }
