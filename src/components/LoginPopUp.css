@@ -1,0 +1,44 @@
+.popup {
+    position: fixed;                /* Fix position to viewport */
+    top: 50%;                      /* Center vertically */
+    left: 50%;                     /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for width/height */
+    background-color: white;       /* Background color for the popup */
+    padding: 20px;                 /* Padding around content */
+    border-radius: 8px;           /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    z-index: 2000;                 /* Ensure it's on top of other elements */
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.popup h2 {
+    margin-bottom: 10px;
+}
+
+.popup input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.popup button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+}
+
+.close-button {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: #333;
+    margin-top: 10px;
+}

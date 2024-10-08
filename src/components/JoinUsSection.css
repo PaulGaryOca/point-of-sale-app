@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.join-us-section {
+    background-image: url('body.png');  /* Add background image */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding: 100px 20px 60px;  /* Add extra top padding to prevent overlap */
+    font-family: 'Poppins', sans-serif;
+}
+.join-us-section .content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Ensure Poppins is used */
+    margin-top: 250px;
+    
+}
+.join-us-section .content p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.primary-btn, .secondary-btn {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+.primary-btn {
+    background-color: #335DA1;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 50px;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.statistics {
+    display: flex;
+    justify-content: center;
+    gap: 100px; /* Adjust gap for more space between the stat items */
+    margin-top: 50px;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item {
+    text-align: center;
+    padding: 0 20px; /* Add padding to each stat item for extra breathing room */
+}
+
+.stat-item h3 {
+    font-size: 32px;
+    margin: 20px 0; /* Increase margin between the number and the label */
+    font-weight: bold;
+}
+
+.stat-item p {
+    font-size: 16px;
+    margin-top: 10px; /* Add margin to space out the labels */
+}
+
+.stat-icon {
+    font-size: 40px;
+    margin-bottom: 15px; /* Increase space between the icon and the number */
+}
+
